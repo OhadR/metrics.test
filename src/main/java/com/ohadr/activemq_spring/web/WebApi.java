@@ -56,19 +56,17 @@ public class WebApi
 	@RequestMapping(value = "/delete",
 					method = RequestMethod.DELETE)
 	public void deleteQueue(
-			HttpServletResponse response) throws IOException, JMSException 
+			HttpServletResponse response) throws IOException 
 	{
 		log.info("::delete request.");
-		sender.delete();
 	}
 
 	@ResponseBody
 	@RequestMapping(value = "/deleteAll",
 					method = RequestMethod.DELETE)
 	public void deleteAllQueues(
-			HttpServletResponse response) throws IOException, JMSException 
+			HttpServletResponse response) throws IOException 
 	{
 		log.info("::deleteAll request.");
-		sender.deleteAll();
 	}
 }
