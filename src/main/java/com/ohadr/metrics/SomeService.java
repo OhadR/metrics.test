@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class QueueSender
+public class SomeService
 {
-	private static Logger log = Logger.getLogger(QueueSender.class);
+	private static Logger log = Logger.getLogger(SomeService.class);
 	
 
-	public QueueSender()
+	public SomeService()
 	{
 	}
 

@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ohadr.metrics.QueueSender;
+import com.ohadr.metrics.SomeService;
 
 
 @Controller
 public class WebApi 
 {
 	@Autowired
-	private QueueSender sender;
+	private SomeService sender;
 
 	private static Logger log = Logger.getLogger(WebApi.class);
 
