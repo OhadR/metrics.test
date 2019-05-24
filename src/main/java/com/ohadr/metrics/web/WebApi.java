@@ -30,16 +30,15 @@ public class WebApi
 					method = RequestMethod.GET,
 					produces = MediaType.APPLICATION_JSON_VALUE)
 	public String getExtractionsMetrics(
-			@RequestParam("message") String message,
+//			@RequestParam("message") String message,
 			@RequestParam("amount") int amount
 			) throws IOException 
 	{
-		log.info("::send request, message is: " + message
-				+ ", amount: " + amount);
+		log.info("::send request, amount: " + amount);
 		
-		sender.send(message, amount);
+		sender.send(amount);
 		
-		return message;
+		return "amount";
 	}
 
 	@ResponseBody

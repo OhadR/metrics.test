@@ -21,7 +21,7 @@ public class SomeService
     private Counter eventCounterMetric;
 
     @Resource
-    MetricRegistry metrics;
+    MetricRegistry metricRegistry;
 
 	public SomeService()
 	{
@@ -29,17 +29,13 @@ public class SomeService
 
     @PostConstruct
     public void init() {
-        eventCounterMetric = new Counter();
+        eventCounterMetric = metricRegistry.counter(MetricRegistry.name(SomeService.class, "cache-evictions"));
+
     }
 
-	public void send( final String message )
-	{
-	}
-	
-	public void send(String message, int amount) {
+	public void send(int amount) {
 		for(int i = 0; i < amount; ++i)
 		{
-			send(message + "#" + i);
 			eventCounterMetric.inc();
 		}
 		
