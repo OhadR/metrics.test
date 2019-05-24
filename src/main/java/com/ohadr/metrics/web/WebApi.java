@@ -1,4 +1,4 @@
-package com.ohadr.activemq_spring.web;
+package com.ohadr.metrics.web;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ohadr.activemq_spring.QueueSender;
+import com.ohadr.metrics.QueueSender;
 
 
 @Controller

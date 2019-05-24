@@ -1,4 +1,4 @@
-package com.ohadr.activemq_spring;
+package com.ohadr.metrics;
 
 import java.util.Set;
 
@@ -13,10 +13,10 @@ public class QueueSender
 	private static Logger log = Logger.getLogger(QueueSender.class);
 	
 
-	@Autowired
-	public QueueSender(  )
+	public QueueSender()
 	{
 	}
+
 	public void send( final String message )
 	{
 	}
