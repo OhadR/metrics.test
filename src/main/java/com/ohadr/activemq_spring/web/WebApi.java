@@ -2,8 +2,8 @@ package com.ohadr.activemq_spring.web;
 
 import java.io.IOException;
 
-import javax.jms.JMSException;
 import javax.servlet.http.HttpServletResponse;
+
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
