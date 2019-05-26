@@ -22,9 +22,8 @@
 
     <metrics:annotation-driven metric-registry="metricRegistry" proxy-target-class="false" expose-proxy="true"/>
 
-<!--     <metrics:reporter type="jmx" metric-registry="metricRegistry" domain="uaeMetrics"/>
- -->
-     <metrics:reporter type="console" metric-registry="metricRegistry" period="10s" />
+    <metrics:reporter type="jmx" metric-registry="metricRegistry" domain="uaeMetrics"/>
+<!--<metrics:reporter type="console" metric-registry="metricRegistry" period="10s" /> -->
 
     <metrics:register metric-registry="metricRegistry">
         <bean metrics:name="jvm.gc" class="com.codahale.metrics.jvm.GarbageCollectorMetricSet"/>
